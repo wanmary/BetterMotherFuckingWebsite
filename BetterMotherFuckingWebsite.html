@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel=stylesheet type="text/css" href="style.css"/>
         <title>Better Motherfucking Website</title>
+	
     </head>
-    <body>
+    <body  >
+	<button class="btn" type="button" onclick="Mpsy()">Mode Psychédélique</button>
         <header>
             <h1>
                 This is <em>still</em>
@@ -84,7 +86,74 @@
         <p>
             This page &mdash;that isn't a total fucking eyesore &mdash;was created by <a href="https://twitter.com/drew_mc">me</a>
             with help from <a href="https://twitter.com/gabehammersmith">him</a>
-
+			
+		<div id="overlay" class="overlay" > 
+		<div id="popup" class="popup">
+			<h1 class="text">  Voulez vous allez sur</h1>
+			<h1 class="text">   xxxvidsxxx </h1>
+			<button type="button" id="boutton" onclick="gotowebsite()">oui</button>
+			<button type="button" id="boutton" onclick="closepopup()">non</button>
+		</div>
+		</div> 
+		
+		<script >
+		var overlay = document.getElementById('overlay');
+		
+		<!-- popup management func definition -->
+		function showpopup() 
+		{
+		overlay.style.display="block";
+		
+        }
+		setTimeout("showpopup()", 10000);
+		
+		function gotowebsite()
+		{
+		
+		window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+		}
+		
+		function closepopup() 
+		{
+		
+		overlay.style.display="none";
+		
+        }
+		
+		<!-- mode psychédelique button func definition -->
+		function Mpsy()
+		{
+		document.body.style.backgroundColor = "magenta";
+		var heading =document.getElementsByTagName("h1");
+		for (j=0;j<heading.length;j++)
+		{
+		heading[j].style.fontFamily ="Comic Sans MS";
+		heading[j].style.color ="green";
+		
+		}
+		var heading =document.getElementsByTagName("h2");
+		for (j=0;j<heading.length;j++)
+		{
+		heading[j].style.color ="green";
+		heading[j].style.fontFamily ="Comic Sans MS";
+		}
+		var heading =document.getElementsByTagName("h3");
+		for (j=0;j<heading.length;j++)
+		{
+		heading[j].style.color ="green";
+		heading[j].style.fontFamily ="Comic Sans MS";
+		}
+		var paragraph =document.getElementsByTagName("p");
+		for (i=0;i<paragraph.length;i++)
+		{
+		paragraph[i].style.color ="blue";
+		paragraph[i].style.fontFamily ="courier";
+		
+		
+		}
+		
+		}
+		
+		</script>
     </body>
 </html>
-
